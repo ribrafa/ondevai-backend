@@ -18,17 +18,17 @@ export default class FuncoesES {
         if (this.usuario1.fazerLogin(email, senha)) {
             console.log("Bem-vindo, " + this.usuario1.nome);
             this.escolhaEvento();
-            return;
+
         } else if (this.usuario2.fazerLogin(email, senha)) {
             console.log("Bem-vindo, " + this.usuario2.nome);
             this.escolhaEvento();
-            return;
+
         } else if (this.usuario3.fazerLogin(email, senha)) {
-            console.log("Bem-vindo, " + this.usuario3.nome);
+            console.log(this.usuario3.nome);
             this.escolhaEvento();
-            return;
+            
         } else {
-            console.log("Acesso negado. Tente novamente.");
+            console.log("Usuario ou senha incorreto, tente novamente.");
             this.verificarLogin();
         }
     }
